@@ -12,11 +12,12 @@ public class Main {
     }
 
     public static String calc(String input) {
-        base (input);
-        return input;
+        String resultCalc = base (input);
+        System.out.println(resultCalc);
+        return resultCalc;
     }
 
-    public static void base(String stroka) {
+    public static String base(String stroka) {
         Number arab = new Number("Arabskie chusla", 0);
         Number rim = new Number("Rimskie chisla", 0);
         String[] mStroka = stroka.split(" ");
@@ -38,25 +39,25 @@ public class Main {
                 System.exit(1);
             }
         }
-        int onOut;
+        String onOut = " ";
         if (variantAr == 1) {
             int[] arOtvet = numberFofWork(mStroka);
             boolean provIsklPoDiapazonu = isklPoDiapazonu(arOtvet);
             arab.chislo = raschetZnacheniy(arOtvet, indexZnaka);
-//            onOut = arab.chislo;
-            System.out.println(arab.chislo);} else {
+            onOut = Integer.toString(arab.chislo);
+            } else {
             if (variantRim == 1) {
                 int[] rimOtvet = rimVAr(mStroka, massRimSravneniay);
                 int rim1Chislo = raschetZnacheniy(rimOtvet, indexZnaka);
                 otricatelnueRim(rim1Chislo);
                 String rimNameOnOut = aruVRim(rim1Chislo, massRimSravneniay);
-                System.out.println(rimNameOnOut);
-//            (String)onOut = rimNameOnOut;
+//                System.out.println(rimNameOnOut);
+            onOut = rimNameOnOut;
             }
         }
-        //  Сюда вставляю
-
+        return onOut;
     }
+
     static int proverayemNaArabskie(String[] rMStroka) throws NumberFormatException  {    //блок 1.1
         int a = 0;
         try {
