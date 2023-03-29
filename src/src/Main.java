@@ -23,7 +23,14 @@ public class Main {
         String[] mStroka = stroka.split(" ");
         String[] massArSravneniay = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
         String[] massRimSravneniay = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII",
-                "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX"};
+                "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX", "XXI", "XXII", "XXIII", "XXIV", "XXV", "XXVI", "XXVII",
+                "XXVIII", "XXIX", "XXX", "XXXI", "XXXII", "XXXIII", "XXXIV", "XXXV", "XXXVI", "XXXVII", "XXXVIII",
+                "XXXIX", "XL", "XLI", "XLII", "XLIII", "XLIV", "XLV", "XLVI", "XLVII", "XLVIII", "XLIX", "L", "LI",
+                "LII", "LIII", "LIV", "LV", "LVI", "LVII", "LVIII", "LIX", "LX", "LXI", "LXII", "LXIII", "LXIV", "LXV",
+                "LXVI", "LXVII", "LXVIII", "LXIX", "LXX", "LXXI", "LXXII", "LXXIII", "LXXIV", "LXXV", "LXXVI", "LXXVII",
+                "LXXVIII", "LXXIX", "LXXX", "LXXXI", "LXXXII", "LXXXIII", "LXXXIV", "LXXXV", "LXXXVI", "LXXXVII",
+                "LXXXVIII", "LXXXIX", "XC", "XCI", "XCII", "XCIII", "XCIV", "XCV", "XCVI", "XCVII", "XCVIII", "XCIX",
+                "C"};
         String[] znak = {"+", "-", "*", "/"};
         if(mnoghestvoZnakov(mStroka, znak) != true) {
             //Вызываем исключение throws Exception //т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)
@@ -150,8 +157,8 @@ public class Main {
                 a = (String) rim[i - 1];
             }
         }
-        if (otvet == 20) {
-            a = (String) rim[19];
+        if (otvet == 100) {
+            a = (String) rim[99];
         }
         return a;
     }
